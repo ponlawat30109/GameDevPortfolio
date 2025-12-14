@@ -17,8 +17,8 @@
 
 .infoGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased from 240px to give more room */
+  gap: 1.5rem;
 }
 
 .infoItem {
@@ -35,6 +35,19 @@
   color: var(--accent-primary);
   width: 24px;
   height: 24px;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* ... existing code ... */
+
+.value {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;          
+  word-break: break-all;       /* Restore break-all but with more width it should be fine, or try break-word */
+  word-break: break-word;      /* Better for email */
+  overflow-wrap: break-word;
+  line-height: 1.4;
 }
 
 .details {
@@ -53,7 +66,35 @@
 .value {
   color: var(--text-primary);
   font-weight: 500;
-  word-break: break-all; /* Prevents email overflow */
+  font-size: 0.95rem;
+  word-break: break-word; 
+  overflow-wrap: break-word;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.socialLink:hover {
+  color: var(--accent-primary);
+  text-decoration-color: var(--accent-primary);
+}
+
+.separator {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
 }
 
 a.value:hover {

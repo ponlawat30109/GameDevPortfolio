@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Contact.module.css';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -34,6 +34,25 @@ const Contact = () => {
               <div className={styles.details}>
                 <span className={styles.label}>Location</span>
                 <span className={styles.value}>Ratchathewi, Bangkok</span>
+              </div>
+            </div>
+
+            <div className={styles.infoItem}>
+              <div className={styles.multiIconWrapper}>
+                <Github className={styles.icon} />
+                {/* <Linkedin className={styles.icon} /> */} 
+              </div>
+              <div className={styles.details}>
+                <span className={styles.label}>Socials</span>
+                <div className={styles.socialLinks}>
+                  <a href="https://github.com/ponlawat30109" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                    GitHub
+                  </a>
+                  <span className={styles.separator}>/</span>
+                  <a href="https://www.linkedin.com/in/ponlawat-suwanyukabordin" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                    LinkedIn
+                  </a>
+                </div>
               </div>
             </div>
           </div>
