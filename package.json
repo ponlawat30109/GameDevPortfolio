@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ponlawat30109.github.io/portfolio",
+  "homepage": "https://ponlawat30109.github.io/GameDevPortfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
