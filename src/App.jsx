@@ -1,24 +1,23 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Intro from './components/Intro';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { Route, Routes } from 'react-router-dom';
+import SiteLayout from './components/SiteLayout';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import HomePage from './pages/HomePage';
+import NotFoundPage from './pages/NotFoundPage';
+import ProjectPage from './pages/ProjectPage';
+import ProjectsPage from './pages/ProjectsPage';
 
-function App() {
+export default function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <main>
-        <Intro />
-        <Skills />
-        <Experience />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Routes>
+      <Route element={<SiteLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="projects" element={<ProjectsPage />} />
+        <Route path="projects/:slug" element={<ProjectPage />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 }
-
-export default App;

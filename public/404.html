@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Loading portfolio…</title></head>
+  <body><script>
+    var base = '/GameDevPortfolio/';
+    var path = location.pathname + location.search + location.hash;
+    sessionStorage.setItem('spa-redirect', path.replace(base.slice(0, -1), '') || '/');
+    location.replace(base);
+  </script></body>
+</html>
