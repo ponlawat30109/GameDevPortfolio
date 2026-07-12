@@ -33,7 +33,7 @@ export default function ProjectsPage() {
           <div className="section-heading">
             <div>
               <p className="eyebrow">Independent projects</p>
-              <h2>Personal systems</h2>
+              <h2>Personal work</h2>
             </div>
           </div>
 
