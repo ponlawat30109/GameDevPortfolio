@@ -1,25 +1,25 @@
-import { ArrowRight, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import PersonalProjectCard from '../components/PersonalProjectCard';
-import ProjectCard from '../components/ProjectCard';
-import { personalProjects } from '../content/personalProjects';
-import { featuredProjects } from '../content/projects';
+import { ArrowRight, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
+import PersonalProjectCard from "../components/PersonalProjectCard";
+import ProjectCard from "../components/ProjectCard";
+import { personalProjects } from "../content/personalProjects";
+import { featuredProjects } from "../content/projects";
 
 const capabilities = [
   [
-    '01',
-    'Gameplay & UI systems',
-    'Movement, combat, animation, skills, UI architecture, and custom Unity tools.',
+    "01",
+    "Gameplay & UI systems",
+    "Movement, combat, animation, skills, UI architecture, and custom Unity tools.",
   ],
   [
-    '02',
-    'Multiplayer networking',
-    'Player–server synchronization and connected gameplay using PUN2, Mirror, and FishNet.',
+    "02",
+    "Multiplayer networking",
+    "Player–server synchronization and connected gameplay using PUN2, Mirror, and FishNet.",
   ],
   [
-    '03',
-    'Backend systems',
-    'REST APIs, real-time services, persistent data, and scalable system design.',
+    "03",
+    "Backend systems",
+    "REST APIs, real-time services, persistent data, and scalable system design.",
   ],
 ];
 
@@ -51,10 +51,22 @@ export default function HomePage() {
           <aside className="status-panel" aria-label="Professional summary">
             <p className="eyebrow">Current profile</p>
             <dl>
-              <div><dt>Role</dt><dd>Game Developer</dd></div>
-              <div><dt>Focus</dt><dd>Multiplayer gameplay</dd></div>
-              <div><dt>Experience</dt><dd>3+ years</dd></div>
-              <div><dt>Location</dt><dd>Bangkok, Thailand</dd></div>
+              <div>
+                <dt>Role</dt>
+                <dd>Game Developer</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Multiplayer gameplay</dd>
+              </div>
+              <div>
+                <dt>Experience</dt>
+                <dd>3+ years</dd>
+              </div>
+              <div>
+                <dt>Location</dt>
+                <dd>Bangkok, Thailand</dd>
+              </div>
             </dl>
           </aside>
         </div>
@@ -63,14 +75,19 @@ export default function HomePage() {
       <section className="section ruled">
         <div className="container">
           <div className="section-heading">
-            <div><p className="eyebrow">Selected work</p><h2>Production projects</h2></div>
+            <div>
+              <p className="eyebrow">Selected work</p>
+              <h2>Production projects</h2>
+            </div>
             <Link className="text-link" to="/projects">
               All projects
               <ArrowRight aria-hidden="true" />
             </Link>
           </div>
           <div className="project-grid">
-            {featuredProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
           </div>
         </div>
       </section>
@@ -78,8 +95,14 @@ export default function HomePage() {
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <div><p className="eyebrow">Independent work</p><h2>Personal systems</h2></div>
-            <Link className="text-link" to="/projects">All projects <ArrowRight aria-hidden="true" /></Link>
+            <div>
+              <p className="eyebrow">Independent projects</p>
+              <h2>Personal work</h2>
+            </div>
+            <Link className="text-link" to="/projects">
+              All projects
+              <ArrowRight aria-hidden="true" />
+            </Link>
           </div>
           <div className="personal-grid compact">
             {personalProjects.slice(0, 2).map((project) => (
